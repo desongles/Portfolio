@@ -10,10 +10,6 @@ Bienvenido a mi portafolio web, un proyecto desarrollado con Angular y diseñado
 - Secciones principales: Sobre mí, Habilidades, Proyectos, Contacto.
 - Funcionalidad de autenticación (Inicio de Sesión y Registro).
 
-## 📸 Captura de pantalla
-
-![Captura del Portafolio](ruta_a_tu_imagen)
-
 ## 🛠️ Tecnologías utilizadas
 
 - **Angular** - Framework de desarrollo frontend.
