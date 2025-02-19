@@ -1,0 +1,33 @@
+<header class="header">
+  <nav class="nav-container">
+    <div class="logo">Mi Portfolio</div>
+    <ul class="nav-links">
+      <li><a routerLink="/about" routerLinkActive="active">Sobre mí</a></li>
+      <li><a routerLink="/skills" routerLinkActive="active">Habilidades</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Proyectos</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+
+      <!-- Enlaces condicionales basados en autenticación -->
+      <ng-container *ngIf="!isLoggedIn">
+        <li><a routerLink="/login" routerLinkActive="active">Iniciar Sesión</a></li>
+        <li><a routerLink="/register" routerLinkActive="active">Registrarse</a></li>
+      </ng-container>
+
+      <ng-container *ngIf="isLoggedIn">
+        <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+        <li class="user-menu">
+          <button (click)="toggleUserMenu()" class="user-button">
+            <img [src]="user?.avatar || 'assets/default-avatar.png'" alt="Avatar" class="avatar">
+            {{ user?.name }}
+          </button>
+          <div class="dropdown-menu" *ngIf="showUserMenu">
+            <a routerLink="/profile">Mi Perfil</a>
+            <a routerLink="/dashboard">Dashboard</a>
+            <a href="#" (click)="logout()">Cerrar Sesión</a>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
