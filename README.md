@@ -55,8 +55,7 @@ Portfolio/
 ## 📬 Contacto
 
 Si tienes alguna pregunta o sugerencia, no dudes en contactarme:
-- **Email:** tuemail@example.com
-- **LinkedIn:** [Tu perfil](https://linkedin.com/in/tuusuario)
+- **Email:** carlosdesongles@gmail.com
 
 ---
 
